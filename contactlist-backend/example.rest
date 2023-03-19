@@ -1,0 +1,64 @@
+POST http://localhost:8800/api/auth/register 
+content-type: application/json
+
+{
+    "username" : "ankita",
+    "email" : "ankita@gmail.com",
+    "password" : "123456"
+}
+
+###
+
+POST http://localhost:8800/api/auth/login
+content-type: application/json
+
+{
+    "username" : "yugesh",
+    "password" : "123456"
+}
+
+###
+
+POST http://localhost:8800/api/contacts/new
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDA5ODA2MTQzNWU1NmUzNjIyMDZiNzUiLCJpYXQiOjE2NzgzNDQzMjUsImV4cCI6MTY3ODM0NzkyNX0.fDpbQZZpm5s5MZS-flo43xSoIHb6ItojzmruN3E7M_8
+
+{
+    "name" : "yukta",
+    "email" : "",
+    "number" : "12345678"
+}
+
+###
+
+PUT http://localhost:8800/api/contacts/edit/640961242d60747759a64fa7
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzODEzYjE4ZGI0MWIxNGU0Y2YwNTUiLCJpYXQiOjE2NzgzNDAxNTgsImV4cCI6MTY3ODM0Mzc1OH0.vpdT_OErBVrjbO2Jr0FXz246mFJ4IB0sloL9_aGp6v8
+
+{
+    "id" : "640961242d60747759a64fa7",
+    "name" : "ankituu"
+}
+
+####
+
+GET http://localhost:8800/protected
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzODEzYjE4ZGI0MWIxNGU0Y2YwNTUiLCJpYXQiOjE2NzgzMzQwNzIsImV4cCI6MTY3ODMzNzY3Mn0.D5wJEIo_vHBttn4jrj4thvC2VAVG7CKguP0nK9k2d9g
+
+###
+
+GET http://localhost:8800/api/contacts/mycontacts
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDA5ODA2MTQzNWU1NmUzNjIyMDZiNzUiLCJpYXQiOjE2NzgzNTIxNjF9.sDxjkY0C1YAixrk_gDyVwK551mYWYGZP1K2CkCP35Ac
+###
+
+GET http://localhost:8800/api/auth/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDA5ODA2MTQzNWU1NmUzNjIyMDZiNzUiLCJpYXQiOjE2NzgzNTIxNjF9.sDxjkY0C1YAixrk_gDyVwK551mYWYGZP1K2CkCP35Ac
+###
+
+DELETE  http://localhost:8800/api/contacts/delete/640961242d60747759a64fa7
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAzODEzYjE4ZGI0MWIxNGU0Y2YwNTUiLCJpYXQiOjE2NzgzNDQwNDYsImV4cCI6MTY3ODM0NzY0Nn0.q68PGaPX_peHvBdXOqTMA0Kh6hXq1B2l_JURQEREK9A
+
